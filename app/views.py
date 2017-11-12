@@ -177,7 +177,7 @@ def intern():
 				break
 	C=A.intersection(B)
 	for i in C:
-		print i.name
+		##print i.name
 	# send_url = 'http://freegeoip.net/json'
 	# r = requests.get(send_url)
 	# j = json.loads(r.text)
@@ -211,7 +211,7 @@ def lol():
 	C=["Indira Gandhi Medical College Shimla","Tenzin Hospital","Postgraduate Institute of Medical Education and Research"]
 	d=[]
 	for i in C:
-		print i
+		#print i
 		e=Internal_Injury.query.filter_by(hos_name=i).first()
 		d.append(float(e.registered)/float(e.capacity))
 	return render_template('index.html',c=["Indira Gandhi Medical College Shimla","Tenzin Hospital","Postgraduate Institute of Medical Education and Research"],d=d)
@@ -236,7 +236,7 @@ def brain():
 				B.add(i)
 				break
 	C=A.intersection(B)		
-	print C###only Postgraduate Institute of Medical Education and Research falls under this as it covers all of the requirements.So just display it and show its score is very less and provide a button (better logistics) which will then lead to a combination for tenzin and igmc. Display that all the required instruments and the doctor are available. 
+	#print C###only Postgraduate Institute of Medical Education and Research falls under this as it covers all of the requirements.So just display it and show its score is very less and provide a button (better logistics) which will then lead to a combination for tenzin and igmc. Display that all the required instruments and the doctor are available. 
 	return render_template("scriptsss2.html",c = next(iter(C)))
 
 @app.route('/brain2')
@@ -265,7 +265,7 @@ def burns():
 				B.add(i)
 				break
 	C=A.intersection(B)		
-	print C###only Postgraduate Institute of Medical Education and Research falls under this category.Show a button for alternate logistics and this time no  hospital.So check hoptitals by increasing radius distance turnwise and cover a hospital.->>rate the remaining  proficiency will be important
+	#print C###only Postgraduate Institute of Medical Education and Research falls under this category.Show a button for alternate logistics and this time no  hospital.So check hoptitals by increasing radius distance turnwise and cover a hospital.->>rate the remaining  proficiency will be important
 	return render_template("logis.html")
 
 #Front end----Notification Portal for the hospital,Location share of ambulance for the hospital,mail or message to the concerning doctor.
@@ -289,7 +289,7 @@ def lolo():
 			p2+=i.ind_prof;
 	p.append(p1)
 	p.append(p2)
-	print p1,p2		
+	#print p1,p2		
 	e=Burns.query.filter_by(hos_name="Tenzin Hospital").first()
 	f=Burns.query.filter_by(hos_name="Indira Gandhi Medical College Shimla").first()
 	ru=[]
