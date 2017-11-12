@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PATIENT DETAILS</title>
+	<style type="text/css">
+		th,td,table{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>date</th>
+			<th>Hospital</th>
+			<th>HB</th>
+			<th>Sugar Before Meal</th>
+			<th>Sugar After Meal</th>
+			<th>Uric</th>
+			<th>Cholestrol</th>
+			<th>Blood Pressure</th>
+			<th>Issue</th>
+		</tr>
+		<tr>
+			<td>{{ data.name }}</td>
+			<td>{{ data.Age }}</td>
+			<td>{{ data.date }}</td>
+			<td>{{ data.hosp }}</td>
+			<td>{{ data.HB }}</td>
+			<td>{{ data.SugarBM }}</td>
+			<td>{{ data.SugarAM }}</td>
+			<td>{{ data.Uric }}</td>
+			<td>{{ data.cholestrol }}</td>
+			<td>{{ data.BP }}</td>
+			<td>{{ data.issue }}</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+	Prediction : <b><i>Heart Attack</i></b>
+</body>
+</html>

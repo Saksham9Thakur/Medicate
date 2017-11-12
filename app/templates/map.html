@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+	<title>
+		Location
+	</title>
+
+</head>
+<body>
+	<div class="agileits_main1">
+    <!-- header -->
+  <div class="container">
+    <div class="w3_agile_logo">
+      <h1><a href="/"><i class="agileits-logo fa fa-plus" aria-hidden="true"></i>Medicate</a></h1>
+    </div>
+    <div class="agileits_w3layouts_nav">
+      <div id="toggle_m_nav">
+        <div id="m_nav_menu" class="m_nav">
+          <div class="m_nav_ham w3_agileits_ham" id="m_ham_1"></div>
+          <div class="m_nav_ham" id="m_ham_2"></div>
+          <div class="m_nav_ham" id="m_ham_3"></div>
+        </div>
+      </div>
+      <div id="m_nav_container" class="m_nav wthree_bg">
+        <nav class="menu menu--sebastian">
+          <ul id="m_nav_list" class="m_nav menu__list">
+            <li class="m_nav_item menu__item menu__item--current" id="m_nav_item_1"> <a href="index.html" class="menu__link"><i class="menu-icon fa fa-home" aria-hidden="true"></i> Home </a></li>
+            <li class="m_nav_item menu__item" id="moble_nav_item_2"> <a href="#about" class="menu__link"><i class="menu-icon fa fa-info-circle" aria-hidden="true"></i>About Us </a> </li>
+            <li class="m_nav_item menu__item" id="moble_nav_item_3"> <a href="#services" class="menu__link"><i class="menu-icon fa fa-cog" aria-hidden="true"></i>Services</a> </li>
+            <li class="m_nav_item menu__item" id="moble_nav_item_4"> <a href="#team" class="menu__link"><i class="menu-icon fa fa-users" aria-hidden="true"></i>Team</a> </li>
+            <li class="m_nav_item menu__item" id="moble_nav_item_5"> <a href="#grid-gallery" class="menu__link"><i class="menu-icon fa fa-file-image-o" aria-hidden="true"></i>lab</a> </li>
+            <li class="m_nav_item menu__item" id="moble_nav_item_6"> <a href="#contact" class="menu__link"><i class="menu-icon fa fa-map-marker" aria-hidden="true"></i> Contact </a> </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+{%for i in range(2)%}
+<tr>
+<td><pre class="saksham">{{c[i]}}</pre> </td>
+<td><pre class="ma" style="display: block;">Chances of survival :<b>CALCULATING...</b></pre><pre class="sakshaam" style="display: none;">{{ru[i]}}</pre></td>
+</tr> 
+{%endfor%}
+
+<!-- {%for i in c%}
+<p class="saksham">{{i}}</p> 
+<br>
+{%endfor%}
+{%for i in ru%}
+<p class="sakshaam" style="display: none;">{{i}}</p> 
+{%endfor%} -->
+{%for i in p%}
+<p class="saakshaam" style="display: none;">{{i}}</p> 
+{%endfor%}
+<script src="../static/js/aa.js"></script>
+ <!-- <div id="map"></div> -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCahVcXKFyNaUxuJ_aw_fhoP-Bwc4Q1fRs&callback=initMap">
+</script>
+<div style="display: none">
+<form action="{{url_for('burn2')}}" method="post">
+<input type="text"  name="name" id="saaaa">	
+<input type="submit" id="sa">
+</form>
+</div>
+<script type="text/javascript">
+setTimeout(display, 3000);
+//data is in window.ar->just use that formula in the javascript only 
+setTimeout(function()
+	{
+		console.log("sadasd");
+		document.getElementById('saaaa').value="Indira Gandhi Medical College Shimla";
+		document.getElementById('sa').click();
+	},10000);
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+<div class="agileits_w3layouts-footer">
+
+  <div class="copy-right text-center">
+    <span class="agileits-copy fa fa-plus" aria-hidden="true"></span>
+    <p>&copy; 2017 Medicate. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+  </div>  
+</div> 
+{% endblock %}

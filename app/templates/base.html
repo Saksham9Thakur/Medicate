@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medicate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Medicate</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="PROJECT NAME" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <!-- stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ url_for('static', filename='css/easy-responsive-tabs.css') }}" rel='stylesheet' type='text/css'/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ url_for('static', filename='css/styless.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ url_for('static', filename='css/gallery.css') }}" rel="stylesheet" type="text/css" media="all" /> <!-- gallery css -->
+    <!-- //stylesheet -->
+    <!-- online fonts -->
+    <link href="//fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <!-- //online fonts -->
+    <!-- font-awesome-icons -->
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css" rel="stylesheet"> 
+    <!-- //font-awesome-icons -->
+    <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.custom.79639.js') }}"></script>   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}" /> 
+    <!-- for smooth scrolling -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/easing.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){   
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+    });
+    </script>
+  </head>
+  <body>
+      {% block content %}{% endblock %}
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jarallax.js') }}"></script>
+<script src="{{ url_for('static', filename='js/SmoothScroll.min.js') }}"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+<!-- here starts scrolling icon -->
+        <!-- start-smoth-scrolling -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/move-top.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/easing.js') }}"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){     
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+        <!-- /ends-smoth-scrolling -->
+    <!-- //here ends scrolling icon -->
+    <!--start-date-piker-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}" />
+        <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+            <script>
+                $(function() {
+                $( "#datepicker,#datepicker1" ).datepicker();
+                });
+            </script>
+<!-- //End-date-piker -->   
+<!-- here starts scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                    };
+                */
+                                        
+                $().UItoTop({ easingType: 'easeOutQuart' });
+                                    
+                });
+        </script>
+<!--tabs-->
+        <script src="{{ url_for('static', filename='js/easy-responsive-tabs.js') }}"></script>
+        <script>
+        $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion           
+        width: 'auto', //auto or any width like 600px
+        fit: true,   // 100% fit in a container
+        closed: 'accordion', // Start closed if in accordion view
+        activate: function(event) { // Callback function if tab is switched
+        var $tab = $(this);
+        var $info = $('#tabInfo');
+        var $name = $('span', $info);
+        $name.text($tab.text());
+        $info.show();
+        }
+        });
+        $('#verticalTab').easyResponsiveTabs({
+        type: 'vertical',
+        width: 'auto',
+        fit: true
+        });
+        });
+        </script>
+  </body>
+</html>

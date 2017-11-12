@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="agileits_main1">
+    <!-- header -->
+	<div class="container">
+		<div class="w3_agile_logo">
+			<h1><a href="/"><i class="agileits-logo fa fa-plus" aria-hidden="true"></i>Medicate</a></h1>
+		</div>
+		<div class="agileits_w3layouts_nav">
+			<div id="toggle_m_nav">
+				<div id="m_nav_menu" class="m_nav">
+					<div class="m_nav_ham w3_agileits_ham" id="m_ham_1"></div>
+					<div class="m_nav_ham" id="m_ham_2"></div>
+					<div class="m_nav_ham" id="m_ham_3"></div>
+				</div>
+			</div>
+			<div id="m_nav_container" class="m_nav wthree_bg">
+				<nav class="menu menu--sebastian">
+					<ul id="m_nav_list" class="m_nav menu__list">
+						<li class="m_nav_item menu__item menu__item--current" id="m_nav_item_1"> <a href="index.html" class="menu__link"><i class="menu-icon fa fa-home" aria-hidden="true"></i> Home </a></li>
+						<li class="m_nav_item menu__item" id="moble_nav_item_2"> <a href="#about" class="menu__link"><i class="menu-icon fa fa-info-circle" aria-hidden="true"></i>About Us </a> </li>
+						<li class="m_nav_item menu__item" id="moble_nav_item_3"> <a href="#services" class="menu__link"><i class="menu-icon fa fa-cog" aria-hidden="true"></i>Services</a> </li>
+						<li class="m_nav_item menu__item" id="moble_nav_item_4"> <a href="#team" class="menu__link"><i class="menu-icon fa fa-users" aria-hidden="true"></i>Team</a> </li>
+						<li class="m_nav_item menu__item" id="moble_nav_item_5"> <a href="#grid-gallery" class="menu__link"><i class="menu-icon fa fa-file-image-o" aria-hidden="true"></i>lab</a> </li>
+						<li class="m_nav_item menu__item" id="moble_nav_item_6"> <a href="#contact" class="menu__link"><i class="menu-icon fa fa-map-marker" aria-hidden="true"></i> Contact </a> </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<div id="map" style="width:100%;height: 350px;align-content: center;"></div>
+<script src="../static/js/dtrectionssss.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCahVcXKFyNaUxuJ_aw_fhoP-Bwc4Q1fRs&callback=initMap">
+</script>
+<script type="text/javascript">
+  setTimeout(calculateAndDisplayRoute,3000);
+</script>
+<br>
+<!-- 	<div class="agileits_w3layouts-footer">
+	<div class="agileits-map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387145.86654334463!2d-74.25818682528057!3d40.70531100753592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1491897561113" style="border:0" allowfullscreen></iframe>
+	</div>	
+</div> -->
+<br><br><br>
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="tile purple">
+        <h3 class="title"><a href="/internal_injury" style="color: white;">Internal Injury</a></h3>
+        <p>Treat internal injury</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile red">
+        <h3 class="title"><a href="/brain" style="color: white;">Brain Injury</a></h3>
+        <p>Treat brain injury</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile orange">
+        <h3 class="title"><a href="/burns" style="color: white;">Burns</a></h3>
+        <p>Treat burns</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="tile green">
+        <h3 class="title">Physical Injury</h3>
+        <p>Treat physial injury</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile blue">
+        <h3 class="title">Cardiac Arrest</h3>
+        <p>Treat cardiac arrest</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile purple">
+        <h3 class="title">Respiratory</h3>
+        <p>Treat Respiratory Disease</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="tile red">
+        <h3 class="title">Muscular</h3>
+        <p>Treat Muscular Dystrophy</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile orange">
+        <h3 class="title">Fracture</h3>
+        <p>Treat fractures</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="tile green">
+        <h3 class="title">Mental Shock</h3>
+        <p>Treat mental shock</p>
+      </div>
+    </div>  
+    </div>  
+  </div>
+
+    <div class="container">
+      <center>
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+       <div class="col-sm-11">
+        
+  <button class="btn-1" id="myButton1">UNABLE TO IDENTIFY</button>
+  <script type="text/javascript">
+    document.getElementById("myButton1").onclick = function () {
+        location.href = "/adhar";
+    };
+</script>
+</center>
+</div>
+<!--       <div class="col-sm-6">
+  <button onclick="/ambulance" class="btn-2" id="myButton2">GO FOR LIVE TREATMENT</button>
+  <script type="text/javascript">
+    document.getElementById("myButton2").onclick = function () {
+        location.href = "/ambulance";
+    };
+</script>
+</div> -->
+</div>
+</div>
+  <!-- footer-->  
+<div class="agileits_w3layouts-footer">
+
+  <div class="copy-right text-center">
+    <span class="agileits-copy fa fa-plus" aria-hidden="true"></span>
+    <p>&copy; 2017 Medicate. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+  </div>  
+</div>  
+{% endblock %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Ambulance Request</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="../static/css/tab.css">
+
+  
+</head>
+
+<body>
+  <section>
+  <!--for demo wrap-->
+  <h1>Patient Report</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+       <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>date</th>
+      <th>Hospital</th>
+      <th>HB</th>
+      <th>Sugar Before Meal</th>
+      <th>Sugar After Meal</th>
+      <th>Uric</th>
+      <th>Cholestrol</th>
+      <th>Blood Pressure</th>
+      <th>Issue</th>
+    </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+{%for i in range(8)%} 
+         <tr>
+      <td>{{ data[i].name }}</td>
+      <td>{{ data[i].Age }}</td>
+      <td>{{ data[i].date }}</td>
+      <td>{{ data[i].hosp }}</td>
+      <td>{{ data[i].HB }}</td>
+      <td>{{ data[i].SugarBM }}</td>
+      <td>{{ data[i].SugarAM }}</td>
+      <td>{{ data[i].Uric }}</td>
+      <td>{{ data[i].cholestrol }}</td>
+      <td>{{ data[i].BP }}</td>
+      <td>{{ data[i].issue }}</td>
+    </tr>
+             {%endfor%}   
+      </tbody>
+    </table>
+  </div>
+</section>
+<br>
+  <br>
+  <br>
+  Prediction : <b><i>Heart Attack</i></b>
+
+</body>
+</html>
