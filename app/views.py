@@ -154,7 +154,6 @@ def sam():
 @app.route("/sa",methods=["GET","POST"])	
 def la():
 	loc=request.form["name"]
-	print loc
 	return render_template('scriptsss.html',c=loc)	
 
 @app.route('/internal_injury')
